@@ -44,7 +44,6 @@ export default function AnswerForm() {
       </div>
       {error && <p className="message error-message">{error}</p>}
       {answer && <div className="message answer-message"><strong>Answer</strong><p>{answer}</p></div>}
-      <div id="demo-value" className="demo-value" aria-live="polite" />
     </form>
   )
 }

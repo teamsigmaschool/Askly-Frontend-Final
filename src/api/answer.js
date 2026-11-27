@@ -1,4 +1,4 @@
-export async function askQuestion(question, { signal } = {}) {
+export async function askQuestion(question) {
   const response = await fetch("/api/answer", {
     method: "POST",
     headers: {
@@ -6,8 +6,7 @@ export async function askQuestion(question, { signal } = {}) {
       "x-user-id": "classroom-user",
       "x-ai-access": "true"
     },
-    body: JSON.stringify({ question }),
-    signal
+    body: JSON.stringify({ question })
   })
 
   const data = await response.json()
